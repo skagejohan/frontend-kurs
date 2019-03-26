@@ -15,3 +15,11 @@
 .layout-row > * + * {
   margin-left: 1rem;
 }
+
+.layout-scrollable {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  height: 100%;
+}

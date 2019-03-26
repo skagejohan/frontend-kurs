@@ -9,3 +9,7 @@ export const Column: React.SFC<{}> = ({ children }) => (
 export const Row: React.SFC<{}> = ({ children }) => (
   <div className="layout-row">{children}</div>
 );
+
+export const Scrollable: React.SFC<{}> = ({ children }) => (
+  <div className="layout-scrollable">{children}</div>
+);

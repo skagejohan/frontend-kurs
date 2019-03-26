@@ -8,8 +8,8 @@ export const Card: React.SFC<{}> = ({ children }) => (
 
 export const List: React.SFC<{ items: React.ReactNode[] }> = ({ items }) => (
   <ul className="list">
-    {items.map(i => (
-      <li>{i}</li>
+    {items.map((item, index) => (
+      <li key={index}>{item}</li>
     ))}
   </ul>
 );

@@ -1,5 +1,6 @@
 import * as express from 'express';
 import * as users from './MOCK_DATA.json';
+import * as cors from 'cors';
 
 // General Lib
 const chain = (...fns) => initialValue =>
@@ -52,6 +53,7 @@ const getRawStack = path => app => get(path, send(app._router.stack))(app);
 
 const app = chain(
   use(express.json()),
+  use(cors()),
   get(
     '/users',
     send(
